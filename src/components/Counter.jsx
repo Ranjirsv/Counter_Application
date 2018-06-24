@@ -47,13 +47,7 @@ export default class Counter extends Component{
 
     handleSubtract(){
         let value = Number(this.state.subtractValue);
-        let counterValue;
-        if(value < 0){
-            counterValue = this.state.counter + value;
-        }
-        else {
-            counterValue = this.state.counter - value;
-        }
+        let counterValue = this.state.counter - value;
         this.setState({
             counter : counterValue,
             subtractValue : ''
